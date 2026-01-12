@@ -19,7 +19,7 @@ def find_invalid_ID(strID):
         maxNum = int(numRange.group(2))
 
         for x in range(minNum, maxNum + 1):
-            if re.fullmatch(r'(.+)\1', str(x)):
+            if re.fullmatch(r'(.+?)\1+', str(x)):
                 invalid_ids.append(x)
 
     total = sum(invalid_ids)
