@@ -22,8 +22,6 @@ def find_invalid_ID(strID):
             if re.fullmatch(r'(.+?)\1+', str(x)):
                 invalid_ids.append(x)
 
-    total = sum(invalid_ids)
-    return total
-
+    return sum(invalid_ids)
 
 print(find_invalid_ID(strID))
