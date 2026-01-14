@@ -14,6 +14,8 @@ def find_invalid_ID(strID):
         i = i.strip()
 
         numRange = re.search(r'(\d+)-(\d+)', i)
+        if not numRange:
+            continue
         
         minNum = int(numRange.group(1))
         maxNum = int(numRange.group(2))
