@@ -1,4 +1,4 @@
-with open ("rotations.txt", 'r') as file:
+with open ("day1/rotations.txt", 'r') as file:
     rotations = file.readlines()
 
 def counting_dial_on_zero(rotations):

@@ -1,6 +1,6 @@
 import re
 
-with open("IDs.txt", "r") as file:
+with open("day2/IDs.txt", "r") as file:
     id = file.readline()
     strID = id.split(',')
 
