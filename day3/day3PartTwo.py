@@ -4,6 +4,10 @@ with open ("day3/batteryInput.txt", "r") as file:
 def find_highest_batteryCombination(battery):
     total = 0
 
+    # this is just a safe guard to ensure we only process 
+    # lines with at least 12 digits.
+    # But here, it is optional, so its not "necessary"
+#----------------------------------------
     for line in battery:
         line = line.strip()
 
@@ -11,6 +15,8 @@ def find_highest_batteryCombination(battery):
             continue
         
         remove_count = len(line) - 12
+#----------------------------------------
+
         stack = []
         
         for digit in line:
@@ -25,6 +31,9 @@ def find_highest_batteryCombination(battery):
             stack.pop()
             remove_count -= 1
         
+        # join fucntion to put the digits together
+        # then convert to integer
+        # finally add to total
         joltage = int(''.join(stack))
         total += joltage
 
